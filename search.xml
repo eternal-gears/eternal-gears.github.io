@@ -4,11 +4,38 @@
   
     
     <entry>
-      <title>Linux学习记录</title>
-      <link href="/2025/06/30/Linux%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-      <url>/2025/06/30/Linux%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+      <title>文章标题</title>
+      <link href="/2025/07/06/hexo%E6%96%87%E7%AB%A0%E5%AE%9E%E4%BE%8B/"/>
+      <url>/2025/07/06/hexo%E6%96%87%E7%AB%A0%E5%AE%9E%E4%BE%8B/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="markdown-格式的正文"><a href="#markdown-格式的正文" class="headerlink" title="markdown 格式的正文"></a>markdown 格式的正文</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo技术教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文章标题</title>
+      <link href="/2025/07/06/Linux%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+      <url>/2025/07/06/Linux%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="markdown-格式的正文"><a href="#markdown-格式的正文" class="headerlink" title="markdown 格式的正文"></a>markdown 格式的正文</h3>]]></content>
       
       
       
@@ -30,6 +57,39 @@
     
   
   
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图片</title>
+      <link href="/images/index.html"/>
+      <url>/images/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/runtime.js"/>
+      <url>/js/runtime.js</url>
+      
+        <content type="html"><![CDATA[setInterval(() => {    let create_time = Math.round(new Date('2025-07-1 00:00:00').getTime() / 1000); //在此行修改建站时间    let timestamp = Math.round((new Date().getTime()) / 1000);    let second = timestamp - create_time;    let time = new Array(0, 0, 0, 0, 0);      var nol = function(h){      return h>9?h:'0'+h;    }    if (second >= 365 * 24 * 3600) {      time[0] = parseInt(second / (365 * 24 * 3600));      second %= 365 * 24 * 3600;    }    if (second >= 24 * 3600) {      time[1] = parseInt(second / (24 * 3600));      second %= 24 * 3600;    }    if (second >= 3600) {      time[2] = nol(parseInt(second / 3600));      second %= 3600;    }    if (second >= 60) {      time[3] = nol(parseInt(second / 60));      second %= 60;    }    if (second > 0) {      time[4] = nol(second);    }    if ((Number(time[2])<22) && (Number(time[2])>7)){      currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/糖果屋-营业中-6adea8?style=social&logo=cakephp' title='距离柴陵秋硕成为金丹强者还剩1000012334天~'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';    }    else{      currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/糖果屋-打烊了-6adea8?style=social&logo=coffeescript' title='孩子们，回家收拾衣服啦'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';    }    document.getElementById("workboard").innerHTML = currentTimeHtml;  }, 1000);]]></content>
+      
+    </entry>
+    
     
     
     <entry>
@@ -55,9 +115,20 @@
     
     
     <entry>
-      <title>图片</title>
-      <link href="/images/index.html"/>
-      <url>/images/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[#footer {    background: transparent !important;}#footer::before{    background: transparent !important;}#page-header {    background: transparent !important;}#page-header::before {    background: transparent !important;}[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}[data-theme="dark"] .magnet_link_context {    background: #1e1e1e;    color: antiquewhite;}[data-theme="dark"] .magnet_link_context:hover {    background: #3ecdf1;    color: #f2f2f2;}@font-face {    /* 为载入的字体取名字(随意) */    font-family: 'YSHST';    /* 字体文件地址(相对或者绝对路径都可以) */    src: url(/font/优设好身体.woff2);    /* 定义加粗样式(加粗多少) */    font-weight: normal;    /* 定义字体样式(斜体/非斜体) */    font-style: normal;    /* 定义显示样式 */    font-display: block; }/* 翻页按钮居中 */#pagination {    width: 100%;    margin: auto; }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -77,9 +148,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -89,8 +160,8 @@
     
     <entry>
       <title></title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <link href="/css/runtime.css"/>
+      <url>/css/runtime.css</url>
       
         <content type="html"><![CDATA[]]></content>
       
