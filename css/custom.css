@@ -593,4 +593,136 @@ body::-webkit-scrollbar {
     ::-webkit-scrollbar-corner {
         background-color: transparent
     }
+    
+}/* 父容器保持双列布局 */
+.recent-post-items {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 25px !important;
+    padding: 20px;
+}
+
+/* 固定大小的透明卡片 - 父容器 */
+.recent-post-item {
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 图片容器 - 与父容器同宽同高 */
+.post_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+}
+
+.post_cover>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.post_cover>a>img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* 卡片内容容器 - 叠加在图片上方 */
+.recent-post-item .recent-post-info {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    /* 移除渐变背景，让内容直接叠加在图片上 */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)); */
+}
+
+/* 标题样式 */
+.post-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 元信息样式 */
+.post-meta {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+/* 摘要样式 - 自动适应剩余空间 */
+.post-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* 滚动条美化 */
+.post-excerpt::-webkit-scrollbar {
+    width: 6px;
+}
+
+.post-excerpt::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+/* 悬停效果 */
+.recent-post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.recent-post-item:hover .post_cover img {
+    transform: scale(1.05);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .recent-posts-items {
+        grid-template-columns: 1fr !important;
+        grid-gap: 20px !important;
+    }
+
+    .recent-post-item {
+        height: 380px;
+        min-height: 380px;
+        max-height: 380px;
+    }
+
+    .recent-post-item .recent-post-info {
+        padding: 20px;
+    }
 }
